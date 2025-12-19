@@ -1,0 +1,10 @@
+[
+	{"bbox_2d": [638, 319, 690, 456], "label": "window"},
+	{"bbox_2d": [607, 602, 654, 679], "label": "window"},
+	{"bbox_2d": [284, 319, 327, 456], "label": "window"},
+	{"bbox_2d": [352, 319, 396, 456], "label": "window"},
+	{"bbox_2d": [418, 319, 462, 456], "label": "window"},
+	{"bbox_2d": [284, 558, 327, 697], "label": "window"},
+	{"bbox_2d": [352, 558, 396, 697], "label": "window"},
+	{"bbox_2d": [418, 558, 462, 697], "label": "window"}
+]

@@ -1,0 +1,7 @@
+[
+	{"bbox_2d": [430, 318, 509, 437], "label": "window"},
+	{"bbox_2d": [603, 318, 681, 437], "label": "window"},
+	{"bbox_2d": [603, 570, 681, 687], "label": "window"},
+	{"bbox_2d": [114, 326, 166, 432], "label": "window"},
+	{"bbox_2d": [265, 570, 373, 687], "label": "window"}
+]
