@@ -3,8 +3,8 @@ import json
 from PIL import Image
 from datasets import Dataset, Features, Value, Image as HFImage
 
-DATA_DIR = "clean_data"
-HF_REPO_ID = "UlrickBL/elevation-dataset"
+DATA_DIR = "synthetic_data"
+HF_REPO_ID = "UlrickBL/elevation-dataset-synthetic"
 
 png_ids = set()
 json_ids = set()
@@ -12,8 +12,8 @@ json_ids = set()
 for fname in os.listdir(DATA_DIR):
     if fname.startswith("elevation_") and fname.endswith(".png"):
         png_ids.add(fname.replace("elevation_", "").replace(".png", ""))
-    elif fname.startswith("elevation_updated_") and fname.endswith(".json"):
-        json_ids.add(fname.replace("elevation_updated_", "").replace(".json", ""))
+    elif fname.startswith("metadata_") and fname.endswith(".json"):
+        json_ids.add(fname.replace("metadata_", "").replace(".json", ""))
 
 common_ids = sorted(png_ids & json_ids)
 
@@ -25,7 +25,7 @@ ground_truths = []
 
 for id_ in common_ids:
     img_path = os.path.join(DATA_DIR, f"elevation_{id_}.png")
-    json_path = os.path.join(DATA_DIR, f"elevation_updated_{id_}.json")
+    json_path = os.path.join(DATA_DIR, f"metadata_{id_}.json")
 
     image = Image.open(img_path).convert("RGB")
 
